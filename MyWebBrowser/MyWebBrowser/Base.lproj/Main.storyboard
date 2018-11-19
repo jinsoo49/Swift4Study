@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="W93-Da-C5k">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyWebBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NSM-nk-8PR">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bbG-cr-Kx8">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="0.90980392160000001" green="0.44934395497166935" blue="0.77715447365810586" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NSM-nk-8PR" secondAttribute="trailing" id="6Oo-lL-wn9"/>
+                            <constraint firstItem="NSM-nk-8PR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8CF-r3-pqd"/>
+                            <constraint firstItem="NSM-nk-8PR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Aqw-14-tcX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NSM-nk-8PR" secondAttribute="trailing" id="J2c-vC-Cof"/>
+                            <constraint firstItem="NSM-nk-8PR" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="L3R-T2-6ZC"/>
+                            <constraint firstItem="bbG-cr-Kx8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RuM-A9-emD"/>
+                            <constraint firstItem="NSM-nk-8PR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TXW-cN-oTC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NSM-nk-8PR" secondAttribute="bottom" id="anX-4Q-pbZ"/>
+                            <constraint firstItem="bbG-cr-Kx8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kWs-So-TD3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NSM-nk-8PR" secondAttribute="trailing" id="zgW-Pp-f6O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="DZx-Vj-UgM"/>
+                        <barButtonItem systemItem="rewind" id="99h-7t-knV">
+                            <connections>
+                                <action selector="goBack:" destination="BYZ-38-t0r" id="5aL-Cd-UDC"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="kID-dx-Iix"/>
+                        <barButtonItem systemItem="refresh" id="sRI-N7-mgj">
+                            <connections>
+                                <action selector="refresh:" destination="BYZ-38-t0r" id="0BU-ji-H5R"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="GPp-J4-zUz"/>
+                        <barButtonItem systemItem="fastForward" id="H4c-hx-LML">
+                            <connections>
+                                <action selector="goForward:" destination="BYZ-38-t0r" id="BPO-d2-Wnp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="rQX-sc-bv5"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="wWc-KI-NjK"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="bbG-cr-Kx8" id="xbA-QA-JWD"/>
+                        <outlet property="webView" destination="NSM-nk-8PR" id="m1n-2G-22R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ruN-ov-g6V">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="W93-Da-C5k" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tnR-JK-joc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I68-Cy-Ozw">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1eb-eg-oQJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dn7-aZ-aDR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="262" y="134"/>
+        </scene>
+    </scenes>
+</document>
